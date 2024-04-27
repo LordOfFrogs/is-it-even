@@ -12,9 +12,12 @@ export default async function Home({ params, searchParams }: { params: { num: nu
         }
         return jsonResponse;
     }
-
-    const isNumEven = (await fetchResult(params.num)).iseven;
-    const adText = (await fetchResult(params.num)).ad;
+    const response = await fetchResult(params.num);
+    if (response.error) {
+        return (<></>);
+    }
+    const isNumEven = response.iseven;
+    const adText = response.ad;
     const showAd = searchParams?.showAd == 'true';
 
     return (
