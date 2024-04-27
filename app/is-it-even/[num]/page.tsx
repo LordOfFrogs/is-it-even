@@ -12,10 +12,8 @@ export default async function Home({ params, searchParams }: { params: { num: nu
         }
         return jsonResponse;
     }
+    
     const response = await fetchResult(params.num);
-    if (response.error) {
-        return (<></>);
-    }
     const isNumEven = response.iseven;
     const adText = response.ad;
     const showAd = searchParams?.showAd == 'true';
