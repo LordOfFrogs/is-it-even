@@ -7,7 +7,7 @@ export function Ad({ text }: { text: string }) {
 
     return (
         <div className="fixed inset-0 space-x-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full flex items-center justify-center">
-            <div className="p-8 border w-1/4 shadow-lg rounded-md bg-blue-950 flex flex-col justify-start items-center space-y-10">
+            <div className="p-8 w-1/4 shadow-lg rounded-md bg-blue-950 flex flex-col justify-start items-center space-y-10">
                 <div className="text-center space-y-5">
                     <h3 className="text-2xl font-bold text-white">Here, have an ad</h3>
                     <p className="text-lg text-white">{text}</p>
