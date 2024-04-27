@@ -19,7 +19,7 @@ export default async function Home({ params, searchParams }: { params: { num: nu
 
     return (
         <>
-            <div className="flex flex-col items-start justify-center">
+            <div className="flex static flex-col items-start justify-center">
                 <p className="text-lg font-bold">Your number is {isNumEven ? "" : "not"} even</p>
             </div>
             {showAd && <Ad text={adText} />}
