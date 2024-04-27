@@ -15,14 +15,14 @@ export default async function Home({ params, searchParams }: { params: { num: nu
 
     const isNumEven = (await fetchResult(params.num)).iseven;
     const adText = (await fetchResult(params.num)).ad;
-    const showAd = searchParams?.showAd;
+    const showAd = searchParams?.showAd == 'true';
 
     return (
         <>
             <div className="flex static flex-col items-start justify-center">
                 <p className="text-lg font-bold">Your number is {isNumEven ? "" : "not"} even</p>
             </div>
-            {showAd && <Ad text={adText} />}
+            {showAd ? <Ad text={adText} /> : <></>}
         </>
     )
 }
